@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.example.gondorchic.definitions.Produit;
 
 @Repository
-public interface ProduitsManager extends JpaRepository<Produit, String>{
+public interface ProduitsManager extends JpaRepository<Produit, Integer>{
     
     @org.springframework.data.jpa.repository.Query(value="select * from t_produit where estDuJour=true",nativeQuery = true)
     Produit rechercherProduitDuJour();

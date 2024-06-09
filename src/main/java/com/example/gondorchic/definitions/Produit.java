@@ -14,6 +14,9 @@ import lombok.Data;
 public class Produit {
     
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    
     @Column(name = "reference")
     private String reference;
 
