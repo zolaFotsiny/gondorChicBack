@@ -18,7 +18,8 @@ public class ProduitsControleur {
     @Autowired
     ProduitsManager produitsManager;
 
-    @CrossOrigin(origins = "*")
+    // @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = {"http://localhost:3000", "https://gondorchicfront.onrender.com"})
     @GetMapping("/produitsDuJour")
     public ResponseEntity<Produit[]> rechercherProduitDuJour() {
         return new ResponseEntity<>(produitsManager.rechercherProduitDuJour(), HttpStatus.OK);
