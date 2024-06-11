@@ -18,7 +18,7 @@ public class ProduitsControleur {
     @Autowired
     ProduitsManager produitsManager;
 
-    @CrossOrigin(origins = "")
+    @CrossOrigin(origins = "*")
     @GetMapping("/produitsDuJour")
     public ResponseEntity<Produit[]> rechercherProduitDuJour() {
         return new ResponseEntity<>(produitsManager.rechercherProduitDuJour(), HttpStatus.OK);
