@@ -1,4 +1,4 @@
-package com.example.gondorchic.modele;
+package com.example.gondorchic.metier.modele;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,7 +22,7 @@ public class Client {
     @Column(name = "pseudo")
     private String pseudo;
 
-    @Column(name = "motDePasse")
+    @Column(name = "motdepasse")
     private String motDePasse;
 
     @Column(name = "nom")
