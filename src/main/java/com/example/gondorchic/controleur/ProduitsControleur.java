@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.gondorchic.definitions.Produit;
-import com.example.gondorchic.metierServices.ProduitsManager;
+import com.example.gondorchic.metier.metierServices.ProduitsManager;
+import com.example.gondorchic.metier.modele.Produit;
 
 @RestController
 @RequestMapping("api/v1/produits")
@@ -21,7 +21,7 @@ public class ProduitsControleur {
     // @CrossOrigin(origins = "*")
     @CrossOrigin(origins = {"http://localhost:3000", "https://gondorchicfront.onrender.com"})
     @GetMapping("/produitsDuJour")
-    public ResponseEntity<Produit[]> rechercherProduitDuJour() {
+    public ResponseEntity<Produit> rechercherProduitDuJour() {
         return new ResponseEntity<>(produitsManager.rechercherProduitDuJour(), HttpStatus.OK);
     }
 }
