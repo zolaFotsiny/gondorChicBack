@@ -14,3 +14,7 @@ insert into T_produit values
 (default, 'REF-0010', 'Glamdring', true, 10.00, 1),
 (default, 'REF-0011', 'La corne de Gondor', false, 25.00, 5), 
 (default, 'REF-0012', 'Sting', false, 30.00, 2);
+
+
+insert into T_client values
+(default, 'CUST-001', 'Marie Dupont', 'marie123', 'Dupont', 'Marie');

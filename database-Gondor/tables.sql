@@ -6,3 +6,12 @@ create table T_produit(
     prix float,
     quantiteEnStock int
 );
+
+create table T_client(
+    id serial primary key,
+    numero varchar,
+    pseudo varchar,
+    motDePasse varchar, 
+    nom varchar,
+    prenom varchar
+);
