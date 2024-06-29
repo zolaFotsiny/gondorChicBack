@@ -18,8 +18,6 @@ public class ClientsControleur {
     
     @Autowired
     ClientsManager clientsManager;
-
-    @CrossOrigin(origins = {"http://localhost:3000", "https://gondorchicfront.onrender.com"})
     @PostMapping("/connexion")
     public ResponseEntity<Client> rechercherClientParPseudo(
             @RequestParam("pseudo") String pseudo,
