@@ -18,8 +18,5 @@ RUN mvn clean package -DskipTests
 # Copier les fichiers de configuration nécessaires
 COPY src/main/resources/application.properties application.properties
 
-# Exposer le port 8080
-EXPOSE 8080
-
 # Définir le point d'entrée de l'application
 ENTRYPOINT ["java", "-jar", "target/gondorchic-0.0.1-SNAPSHOT.jar"]
